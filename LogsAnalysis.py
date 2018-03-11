@@ -57,7 +57,7 @@ query_3 = """select req_all.datef, (100.0*req_err.errors/req_all.all_requests) a
                 group by datef
                 ) as req_all
             on req_err.datef = req_all.datef
-            where (100.0*req_err.errors/req_all.all_requests) > 1.0;
+            where (100.0*req_err.errors/req_all.all_requests) > 1.0
             """
 
 # Run queries one by one, format results to be easily readable, and print out results
